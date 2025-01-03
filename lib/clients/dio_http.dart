@@ -1,10 +1,7 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:dio/io.dart';
 import 'package:enum_to_string/enum_to_string.dart';
-import 'package:flutter/foundation.dart';
-import 'package:native_dio_adapter/native_dio_adapter.dart';
 import 'package:robust_http/clients/base_http.dart';
 import 'package:robust_http/exceptions.dart';
 import 'package:robust_http/file_info.dart';
@@ -56,7 +53,7 @@ class DioHttp extends BaseHttp {
     }
 
     _dio = new Dio(baseOptions);
-    _dio.httpClientAdapter = NativeAdapter();
+    _dio.httpClientAdapter = HttpClientAdapter();
     var logLevel = options['logLevel'];
     if (logLevel != 'none') {
       _dio.interceptors.add(LoggerInterceptor(logLevel == 'debug'));

@@ -17,7 +17,6 @@ dependencies:
   enum_to_string: ^2.0.1
   singleton: ^0.0.3-nullsafety
   internet_connection_checker: ^1.0.0+1
-  native_dio_adapter: ^1.4.0
 
 dev_dependencies:
   flutter_test:
